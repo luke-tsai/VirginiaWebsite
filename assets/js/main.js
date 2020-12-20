@@ -1,8 +1,33 @@
-/*
-	Visualize by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
-*/
+
+function update(){
+            var port = document.getElementById("portraitimgs");
+            var stil = document.getElementById("stillimgs");
+            var land = document.getElementById("landscapeimgs");
+        switch(location.hash){
+                case '':
+                case '#':
+                case '#all':
+                    port.style.display = "block";
+                    stil.style.display = "block";
+                    land.style.display = "block";
+                    break;
+                case '#portrait':
+                    port.style.display = "block";
+                    stil.style.display = "none";
+                    land.style.display = "none";
+                    break;
+                case '#still':
+                    port.style.display = "none";
+                    stil.style.display = "block";
+                    land.style.display = "none";
+                    break;
+                case '#landscape':
+                    port.style.display = "none";
+                    stil.style.display = "none";
+                    land.style.display = "block";
+                    break;
+            }
+     }
 
 $(function() {
 
@@ -10,6 +35,8 @@ $(function() {
 		var	$window = $(window),
 			$body = $('body'),
 			$wrapper = $('#wrapper');
+			$document = $(document);
+
 
 	// Breakpoints.
 		skel.breakpoints({
@@ -45,5 +72,8 @@ $(function() {
 			});
 
 		});
+
+		$document.ready(update());
+
 
 });

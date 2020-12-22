@@ -1863,7 +1863,7 @@
 		display: inline-block;
 		padding: 0.5em;
 		border: solid 1px rgba(255, 255, 255, 0.25);
-		background-color: rgba(255, 255, 255, 0.075);
+		background-color: rgba(255, 255, 255, 0.25);
 	}
 
 		.style2 > .label {
@@ -1882,6 +1882,7 @@
 		.style2:hover {
 			background-color: rgba(255, 255, 255, 0.25);
 		}
+
 
 		@media screen and (max-width: 736px) {
 

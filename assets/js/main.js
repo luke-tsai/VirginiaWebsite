@@ -1,30 +1,52 @@
 
-function update(){
-            var port = document.getElementById("portraitimgs");
-            var stil = document.getElementById("stillimgs");
-            var land = document.getElementById("landscapeimgs");
-        switch(location.hash){
+function update(text){
+        switch(text){
+        /*
                 case '':
                 case '#':
                 case '#all':
-                    port.style.display = "block";
-                    stil.style.display = "block";
-                    land.style.display = "block";
-                    break;
+                    $(".Portrait").show();
+                    $(".Still").show();
+                    $(".Landscape").show();
+                    document.getElementById("portbtn").style.backgroundColor = 'rgba(255, 255, 255, 0.25)';
+                    document.getElementById("stillbtn").style.backgroundColor = 'rgba(255, 255, 255, 0.25)';
+                    document.getElementById("landbtn").style.backgroundColor = 'rgba(255, 255, 255, 0.25)';
+                    break;*/
                 case '#portrait':
-                    port.style.display = "block";
-                    stil.style.display = "none";
-                    land.style.display = "none";
+                    if (port) {
+                        $(".Portrait").hide();
+                        port=0;
+                        document.getElementById("portbtn").style.backgroundColor = 'rgba(255, 255, 255, 0.075)';
+
+                    } else{
+                        $(".Portrait").show();
+                        port=1;
+                        document.getElementById("portbtn").style.backgroundColor = 'rgba(255, 255, 255, 0.25)';
+                    }
                     break;
                 case '#still':
-                    port.style.display = "none";
-                    stil.style.display = "block";
-                    land.style.display = "none";
+                    if (still) {
+                        $(".Still").hide();
+                        still=0;
+                        document.getElementById("stillbtn").style.backgroundColor = 'rgba(255, 255, 255, 0.075)';
+
+                    } else{
+                        $(".Still").show();
+                        still=1;
+                        document.getElementById("stillbtn").style.backgroundColor = 'rgba(255, 255, 255, 0.25)';
+                    }
                     break;
                 case '#landscape':
-                    port.style.display = "none";
-                    stil.style.display = "none";
-                    land.style.display = "block";
+                    if (land) {
+                        $(".Landscape").hide();
+                        land=0;
+                        document.getElementById("landbtn").style.backgroundColor = 'rgba(255, 255, 255, 0.075)';
+
+                    } else{
+                        $(".Landscape").show();
+                        land=1;
+                        document.getElementById("landbtn").style.backgroundColor = 'rgba(255, 255, 255, 0.25)';
+                    }
                     break;
             }
      }
@@ -36,6 +58,10 @@ $(function() {
 			$body = $('body'),
 			$wrapper = $('#wrapper');
 			$document = $(document);
+			port=1;
+            land=1;
+            still=1;
+
 
 
 	// Breakpoints.

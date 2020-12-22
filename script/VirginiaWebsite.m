@@ -4,7 +4,7 @@ function VirginiaWebsite
     %% imports tidbits
     fileloc='C:\Users\ltsai\Documents\Personal\Github\VirginiaWebsite\VirginiaWebsite\';
 %     'images\fulls\'
-    [ImageName,Subtitle,Tag1,Tag2,Tag3,Tag4,A,B,C,D] = importfile([fileloc,'script\PhotoIndex.xlsx']);
+    [ImageName,Subtitle,Tag1,Tag2,Tag3,Tag4,A,B,C,D] = importfile([fileloc,'images\fulls\PhotoIndex.xlsx']);
 
     header=fileread([fileloc,'script\Header.txt']);
     footer=fileread([fileloc,'script\Footer.txt']);    
@@ -14,7 +14,7 @@ function VirginiaWebsite
       
     index=[fileloc,'index.html'];
     
-    source_files = dir(fullfile([fileloc,'images/fulls/'], '*.jpg'));
+    source_files = dir(fullfile([fileloc,'images\thumbs\'], '*.jpg'));
     count=length(source_files);
     lengths=[0 0 0];
     col1='<div>';
@@ -23,7 +23,7 @@ function VirginiaWebsite
     
     for i=1:length(source_files)
         a=length(source_files)+1-i;
-        img=imread([fileloc,'images/thumbs/',char(ImageName(a+1))]);
+        img=imread([fileloc,'images\thumbs\',char(ImageName(a+1))]);
         ims=size(img);
         relh=ims(1)/ims(2);
         [M,ind] = min(lengths);
@@ -60,7 +60,7 @@ function VirginiaWebsite
         
     fprintf(fid, '%s', footer);
     fclose(fid);
-   
+   disp('done');
 end
 
 function [ImageName,Subtitle,Tag1,Tag2,Tag3,Tag4,A,B,C,D] = importfile(workbookFile,sheetName,startRow,endRow)

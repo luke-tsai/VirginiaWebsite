@@ -1451,7 +1451,6 @@
 
 		a:hover {
 			color: #ffffff;
-			border-bottom-color: transparent;
 		}
 
 	strong, b {
@@ -1879,9 +1878,6 @@
 			font-size: 1.35em;
 		}
 
-		.style2:hover {
-			background-color: rgba(255, 255, 255, 0.25);
-		}
 
 
 		@media screen and (max-width: 736px) {

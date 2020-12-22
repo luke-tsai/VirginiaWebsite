@@ -23,14 +23,14 @@ function VirginiaWebsite
     
     for i=1:length(source_files)
         a=length(source_files)+1-i;
-        img=imread([fileloc,'images/thumbs/',source_files(a).name]);
+        img=imread([fileloc,'images/thumbs/',char(ImageName(a+1))]);
         ims=size(img);
         relh=ims(1)/ims(2);
         [M,ind] = min(lengths);
         
         temptext=snippet;
         temptext=strrep(temptext,'[tags]',Tags(a+1));
-        temptext=strrep(temptext,'[path]',source_files(a).name);
+        temptext=strrep(temptext,'[path]',ImageName(a+1));
         temptext=strrep(temptext,'[description]',Subtitle(a+1));
         
         lengths(ind)=lengths(ind)+relh+.2;

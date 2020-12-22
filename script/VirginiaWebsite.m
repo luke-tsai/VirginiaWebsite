@@ -33,7 +33,7 @@ function VirginiaWebsite
         temptext=strrep(temptext,'[path]',ImageName(a+1));
         temptext=strrep(temptext,'[description]',Subtitle(a+1));
         
-        lengths(ind)=lengths(ind)+relh+.2;
+        lengths(ind)=lengths(ind)+relh+.27;
         switch ind
             case 1
                 col1=[col1 temptext];

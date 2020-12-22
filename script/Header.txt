@@ -22,6 +22,7 @@
 							<li><a id="portbtn" onclick="update('#portrait')" class="fas style2 fa-user-friends"><span class="label">Portrait</span></a></li>
 							<li><a id="stillbtn" onclick="update('#still')" class="fas style2 fa-flower-tulip"><span class="label">Still Life</span></a></li>
 							<li><a id="landbtn" onclick="update('#landscape')" class="fas style2 fa-mountains"><span class="label">Landscape</span></a></li>
+							<li><a id="streetbtn" onclick="update('#street')" class="fas style2 fa-road"><span class="label">Street</span></a></li>
 						</ul>
 					</header>
 

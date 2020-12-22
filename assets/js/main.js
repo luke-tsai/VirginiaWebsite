@@ -1,53 +1,47 @@
 
 function update(text){
         switch(text){
-        /*
-                case '':
-                case '#':
-                case '#all':
-                    $(".Portrait").show();
-                    $(".Still").show();
-                    $(".Landscape").show();
-                    document.getElementById("portbtn").style.backgroundColor = 'rgba(255, 255, 255, 0.25)';
-                    document.getElementById("stillbtn").style.backgroundColor = 'rgba(255, 255, 255, 0.25)';
-                    document.getElementById("landbtn").style.backgroundColor = 'rgba(255, 255, 255, 0.25)';
-                    break;*/
                 case '#portrait':
-                    if (port) {
-                        $(".Portrait").hide();
-                        port=0;
-                        document.getElementById("portbtn").style.backgroundColor = 'rgba(255, 255, 255, 0.075)';
-
-                    } else{
-                        $(".Portrait").show();
-                        port=1;
-                        document.getElementById("portbtn").style.backgroundColor = 'rgba(255, 255, 255, 0.25)';
-                    }
+                    port=1-port;
                     break;
                 case '#still':
-                    if (still) {
-                        $(".Still").hide();
-                        still=0;
-                        document.getElementById("stillbtn").style.backgroundColor = 'rgba(255, 255, 255, 0.075)';
-
-                    } else{
-                        $(".Still").show();
-                        still=1;
-                        document.getElementById("stillbtn").style.backgroundColor = 'rgba(255, 255, 255, 0.25)';
-                    }
+                    still=1-still;
                     break;
                 case '#landscape':
-                    if (land) {
-                        $(".Landscape").hide();
-                        land=0;
-                        document.getElementById("landbtn").style.backgroundColor = 'rgba(255, 255, 255, 0.075)';
-
-                    } else{
-                        $(".Landscape").show();
-                        land=1;
-                        document.getElementById("landbtn").style.backgroundColor = 'rgba(255, 255, 255, 0.25)';
-                    }
+                    land=1-land;
                     break;
+                case '#street':
+                    street=1-street;
+                    break;
+            }
+            $(".Portrait").hide();
+            $(".Street").hide();
+            $(".Still").hide();
+            $(".Landscape").hide();
+
+            if (port){
+                $(".Portrait").show();
+                document.getElementById("portbtn").style.backgroundColor = 'rgba(255, 255, 255, 0.25)';
+            } else{
+                document.getElementById("portbtn").style.backgroundColor = 'rgba(255, 255, 255, 0.075)';
+            }
+            if (land){
+                $(".Landscape").show();
+                document.getElementById("landbtn").style.backgroundColor = 'rgba(255, 255, 255, 0.25)';
+            } else{
+                document.getElementById("landbtn").style.backgroundColor = 'rgba(255, 255, 255, 0.075)';
+            }
+            if (still){
+                $(".Still").show();
+                document.getElementById("stillbtn").style.backgroundColor = 'rgba(255, 255, 255, 0.25)';
+            } else{
+                document.getElementById("stillbtn").style.backgroundColor = 'rgba(255, 255, 255, 0.075)';
+            }
+            if (street){
+                $(".Street").show();
+                document.getElementById("streetbtn").style.backgroundColor = 'rgba(255, 255, 255, 0.25)';
+            } else{
+                document.getElementById("streetbtn").style.backgroundColor = 'rgba(255, 255, 255, 0.075)';
             }
      }
 
@@ -61,6 +55,7 @@ $(function() {
 			port=1;
             land=1;
             still=1;
+            street=1;
 
 
 

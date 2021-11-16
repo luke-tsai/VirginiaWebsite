@@ -1,0 +1,15 @@
+</section>
+                            <!-- right -->
+                        </div>
+                        <!-- content -->
+                    </div>
+                </div>
+            </main>
+
+<main class="main-wrapper" id="container"> 
+  
+  <!-- image Gallery -->
+  <h3 style="text-align:center;">Image Gallery</h3>
+  <div class="wrapper">
+    <div class="">
+      <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4 masonry">

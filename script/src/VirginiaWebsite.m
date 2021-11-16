@@ -2,7 +2,7 @@ function MomWebsite
     clc
     
     %% imports tidbits
-    fileloc='C:\Users\ltsai\Documents\Personal\Github\VirginiaWebsite\VirginiaPortfolio\';
+    fileloc='C:\Users\ltsai\Documents\Personal\Github\VirginiaWebsite\VirginiaWebsite\';
     
     [Image,Title,Series,Seq,Desc,A,B,C,D,E,F,G,H,I] = importfile([fileloc,'script\PhotoData.xlsx']);
     
@@ -11,7 +11,7 @@ function MomWebsite
     ibody=fileread([fileloc,'script\src\i_Body.txt']);
     
     footer=fileread([fileloc,'script\src\Footer.txt']);
-    ifile=[fileloc,'index2.html'];
+    ifile=[fileloc,'index.html'];
     
     bio=fileread([fileloc,'script\Biography.txt']);
     
@@ -24,7 +24,7 @@ function MomWebsite
     
     fid = fopen(ifile,'a');
     
-    biography=char(strsplit(bio,{char(13),char(10)},'CollapseDelimiters',true));
+    biography=char(strsplit(bio,{char(13),char(10)},'CollapseDelimiters',true))
     %%close out
     for i=1:size(biography,1)
         fprintf(fid, '%s', '<p>');

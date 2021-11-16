@@ -1,5 +1,0 @@
-
-									<a class="[tags]" href="images/fulls/[path]">
-										<img src="images/thumbs/[path]" alt="" />
-										<h3>[description]</h3>
-									</a>

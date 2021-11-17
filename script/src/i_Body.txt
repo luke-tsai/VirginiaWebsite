@@ -1,9 +1,9 @@
 
-        <li class="masonry-item grid">
-          <figure class="effect-bubba"> <img src="images/gallery/[num]s.jpg" alt="" />
-            <figcaption>
-              <h2>[title]</h2>
-              <p>[desc]</p>
-              <a href="images/gallery/[num].jpg" data-lightbox="[series]" data-title="[series]">[title]</a></figcaption>
-          </figure>
-        </li>
+        {li class="masonry-item grid"}
+          {figure class="effect-bubba"} {img src="images/gallery/[num]s.jpg" alt="" /}
+            {figcaption}
+              {h2}[title]{/h2}
+              {p}[desc]{/p}
+              {a href="images/gallery/[num].jpg" data-lightbox="[series]" data-title="[series]" serial="[seq]"}[title]{/a}{/figcaption}
+          {/figure}
+        {/li}

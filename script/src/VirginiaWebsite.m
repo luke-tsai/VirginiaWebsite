@@ -1,5 +1,6 @@
-function MomWebsite
+function VirginiaWebsite
     clc
+    clear all
     
     %% imports tidbits
     fileloc='C:\Users\ltsai\Documents\Personal\Github\VirginiaWebsite\VirginiaWebsite\';
@@ -33,13 +34,15 @@ function MomWebsite
     end
     
     fprintf(fid, '%s', bodytop);
-    
     for i = 1:length(Image(~isnan(Image)))
             data=strrep(ibody,'[num]',num2str(Image(i),'%03.0f'));
             data=strrep(data,'[title]',Title(i));
             data=strrep(data,'[desc]',Desc(i));
             data=strrep(data,'[series]',Series(i));
-            fprintf(fid, '%s', data);
+            data=strrep(data,'[seq]',num2str(Seq(i)));
+            data=strrep(data,'{','<');
+            data=strrep(data,'}','>');
+            fprintf(fid, '%s', data)
             data
     end
     

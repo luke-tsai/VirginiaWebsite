@@ -221,20 +221,24 @@
       self.album.push({
         alt: $link.attr('data-alt'),
         link: $link.attr('href'),
+        serial: Number($link.attr('serial')),
         title: $link.attr('data-title') || $link.attr('title')
       });
+
+      self.album.sort((a, b) => (a.serial > b.serial) ? 1 : -1)
     }
 
     // Support both data-lightbox attribute and rel attribute implementations
     var dataLightboxValue = $link.attr('data-lightbox');
     var $links;
+    var serial = Number($link.attr('serial'))-1;
 
     if (dataLightboxValue) {
       $links = $($link.prop('tagName') + '[data-lightbox="' + dataLightboxValue + '"]');
       for (var i = 0; i < $links.length; i = ++i) {
         addToAlbum($($links[i]));
         if ($links[i] === $link[0]) {
-          imageNumber = i;
+          imageNumber = serial;
         }
       }
     } else {
@@ -247,7 +251,8 @@
         for (var j = 0; j < $links.length; j = ++j) {
           addToAlbum($($links[j]));
           if ($links[j] === $link[0]) {
-            imageNumber = j;
+            //imageNumber = i;
+            imageNumber = serial;
           }
         }
       }

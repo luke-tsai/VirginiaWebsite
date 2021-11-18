@@ -68,7 +68,7 @@
 
 .grid figure figcaption {
 
-	padding: 2em;
+	padding: 30px;
 
 	color: #fff;
 
@@ -134,13 +134,15 @@
 
 .grid figure h2 {
 
-	word-spacing: -0.15em;
+	word-spacing: -0.05em;
 
 	font-weight: normal;
 
 	color: #fff;
 
 	font-family: 'Oranienbaum', serif;
+
+	overflow-wrap: break-word;
 
 }
 
@@ -172,7 +174,7 @@
 
 	font-size: 68.5%;
 
-	color: #fff; text-transform:capitalize
+	color: #fff;
 
 }
 

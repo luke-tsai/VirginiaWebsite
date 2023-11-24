@@ -95,18 +95,18 @@
           <input type="submit" value="Send Message">
         </form>
         <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
-        <script src="assets/js/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script type="text/javascript">var submitted=false;</script>
         <script type="text/javascript">
         $('#gform').on('submit', function(e) {
           $('#gform *').fadeOut(2000);
           $('#gform').prepend('Your submission has been processed...');
           });
-</script>
+        </script>
       </div>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
-    <script src="assets/js/functions-min.js"></script>
+    <script src="assets/js/functions.js"></script>
   </body>
 </html>

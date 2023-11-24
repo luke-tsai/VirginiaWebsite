@@ -88,12 +88,21 @@
           <h2><strong>Say</strong> Hello</h2>
           <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
         </div>
-        <form>
-          <input type="email" placeholder="Your Email">
-          <input type="text" placeholder="Your Name">
-          <textarea placeholder="Message"></textarea>
+        <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLScdPiDwDqqV3SQWYr5U3rwdEguS5hqJHQIg9iDqlRR8onerkw/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+          <input type="email" placeholder="Your Email" name="entry.2000276869" id="entry.2000276869">
+          <input type="text" placeholder="Your Name" name="entry.1590694989" id="entry.1590694989">
+          <textarea placeholder="Message" name="entry.216477151" id="entry.216477151"></textarea>
           <input type="submit" value="Send Message">
         </form>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+        <script src="assets/js/jquery.min.js"></script>
+        <script type="text/javascript">var submitted=false;</script>
+        <script type="text/javascript">
+        $('#gform').on('submit', function(e) {
+          $('#gform *').fadeOut(2000);
+          $('#gform').prepend('Your submission has been processed...');
+          });
+</script>
       </div>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>

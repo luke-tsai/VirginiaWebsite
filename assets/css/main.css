@@ -433,7 +433,7 @@ svg path{
     display:block;
     width:23px;
     height:2px;
-    background-color:#111
+    background-color:#efefef
 }
 #hero header .nav-toggle span:before{
     bottom:7px
@@ -441,7 +441,7 @@ svg path{
 #hero header .nav-toggle span:after{
     top:5px
 }
-#hero .wrapper{
+#hero .wrapper2{
     position:relative;
     display:-webkit-box;
     display:-webkit-flex;
@@ -456,8 +456,32 @@ svg path{
     -ms-flex-align:center;
     align-items:center
 }
+#hero .wrapper{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-image:url("../img/hero.jpg");
+
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    -webkit-box-align:center;
+    -webkit-align-items:center;
+    -ms-flex-align:center;
+    align-items:center
+}
+@media (max-width: 768px){
+    #hero .wrapper{
+        background-image:url("../img/herosmall.jpg");
+    }
+}
 #hero .wrapper .welcome{
-    width:45%
+    width:45%;
 }
 #hero .wrapper .welcome:after{
     content:"";
@@ -518,7 +542,7 @@ svg path{
         -webkit-align-items:flex-end;
         -ms-flex-align:end;
         align-items:flex-end;
-        text-align:right
+        text-align:right;
     }
     #hero .wrapper .photographer{
         display:none
@@ -712,6 +736,10 @@ svg path{
 #full-slide .banner li:nth-child(3){
     background-image:url("../img/full-slide/thumb-3.jpg")
 }
+#full-slide .banner li:nth-child(4){
+    background-image:url("../img/full-slide/thumb-4.jpg")
+}
+
 #full-slide i{
     position:absolute;
     top:50%;
@@ -790,7 +818,7 @@ svg path{
     content:"";
     display:inline-block;
     width:1px;
-    height:70px;
+    height:0px;
     background-color:#111
 }
 #featured .wrapper .blurb h2{
@@ -814,7 +842,11 @@ svg path{
     width:55%
 }
 #featured .wrapper .featured img{
-    width:100%
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height:600px;
+    max-width:100%
 }
 @media (max-width: 1023px){
     #featured .wrapper .blurb{

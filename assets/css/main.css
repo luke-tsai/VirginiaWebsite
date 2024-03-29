@@ -755,6 +755,7 @@ svg path{
 #full-slide .banner li:nth-child(6){
     background-image:url("../img/full-slide/thumb-6.jpg")
 }
+#full-slide .banner li:nth-child(7){
     background-image:url("../img/full-slide/thumb-7.jpg")
 }
 #full-slide i{
